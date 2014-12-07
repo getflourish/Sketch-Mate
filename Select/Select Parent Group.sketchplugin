@@ -1,0 +1,10 @@
+// Selects the parent group of a layer (option cmd g)
+
+#import 'inventory.js'
+
+if (selection.count() > 0) {
+	var layer = selection[0];
+	com.getflourish.layers.selectParentGroup(layer);
+} else {
+	doc.showMessage("Please select a layer.");
+}
