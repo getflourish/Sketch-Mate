@@ -18,6 +18,10 @@ These plugins will make you best friends with Sketch.
 #### Smart Align
 * Smart Align Horizontally `⌘` + `⌥` + `,`
 * Smart Align Vertically `⌘` + `⌥` + `.`
+* Smart Align Bottom `control` + `⌘` + `⌥` + `↓`
+* Smart Align Left `control` + `⌘` + `⌥` + `←`
+* Smart Align Right `control` + `⌘` + `⌥` + `→`
+* Smart Align Top `control` + `⌘` + `⌥` + `↑`
 * Distribute Horizontally `control` + `⌘` + `⌥` + `,`
 * Distribute Vertically `control` + `⌘` + `⌥` + `.`
 * Space Horizontal
