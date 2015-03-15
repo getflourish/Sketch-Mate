@@ -1,4 +1,4 @@
-// Aligns layers to their parent group’s right edge (control cmd alt →)
+// Aligns layers to their parent group’s right edge (control cmd →)
 
 #import 'inventory.js'
 
