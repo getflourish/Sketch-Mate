@@ -3,8 +3,8 @@
 #import 'inventory.js'
 
 if (selection.count() > 0) {
-	var layer = selection[0];
-	com.getflourish.layers.selectParentGroup(layer);
+	var parent = selection[0].parentGroup();
+	com.getflourish.layers.select( parent );
 } else {
 	doc.showMessage("Please select a layer.");
 }
