@@ -695,11 +695,17 @@ com.getflourish = (function() {
           return layer1.objectID() === layer2.objectID();
       },
       select: function (layers) {
+          // make into array if only a single layer has been passed through
+          if ( !layers.length ) {
+            var layer = layers;
+            layers = [ layer ];
+          }
+
           // deselect first
           doc.currentPage().deselectAllLayers();
 
           // then select all layers from the original selection
-          for (var i = 0; i < layers.count(); i++) {
+          for (var i = 0; i < layers.length; i++) {
               layers[i].setIsSelected(true);
           }
       },
