@@ -1,0 +1,263 @@
+{
+  "name": "Sketch Mate",
+  "description": "These plugins will make you best friends with Sketch",
+  "author": "Florian Schulz",
+  "homepage": "https://github.com/getflourish/Sketch-Mate",
+  "version": 1.0,
+  "identifier": "com.getflourish.sketch.mate",
+  "updateURL": "https://github.com/downloads/example/sketchplugins/sketchplugins.json",
+  "compatibleVersion": 3.3,
+  "bundleVersion": 1,
+  "commands": [
+
+    {
+      "name": "Duplicate Artboard",
+      "identifier": "com.getflourish.mate.artboards.duplicate",
+      "shortcut": "shift command d",
+      "script": "Artboards/Duplicate Artboard.js"
+    },
+    {
+      "name": "Fit Artboard Height",
+      "identifier": "com.getflourish.mate.artboards.fitArtboardHeight",
+      "shortcut": "shift control a",
+      "script": "Artboards/Fit Artboard Height.js"
+    },
+    {
+      "name": "Fit Artboard",
+      "identifier": "com.getflourish.mate.artboards.fitArtboard",
+      "shortcut": "",
+      "script": "Artboards/Fit Artboard.js"
+    },
+    {
+      "name": "Remove Artboard",
+      "identifier": "com.getflourish.mate.artboards.remove",
+      "shortcut": "cmd shift ⌫",
+      "script": "Artboards/Remove Artboard.js"
+    },
+    {
+      "name": "Sort Artboards by Position",
+      "identifier": "com.getflourish.mate.artboards.sortByPosition",
+      "shortcut": "",
+      "script": "Artboards/Sort Artboards by Position.js"
+    },
+
+    {
+      "name": "Goto Artboard",
+      "identifier": "com.getflourish.mate.misc.gotoArtboard",
+      "shortcut": "",
+      "script": "Misc/Goto Artboard.js"
+    },
+    {
+      "name": "Goto Page",
+      "identifier": "com.getflourish.mate.misc.gotoPage",
+      "shortcut": "cmd p",
+      "script": "Misc/Goto Page.js"
+    },
+    {
+      "name": "Replace Layer",
+      "identifier": "com.getflourish.mate.misc.replaceLayer",
+      "shortcut": "cmd option r",
+      "script": "Misc/Replace Layer.js"
+    },
+    {
+      "name": "Set Line Height",
+      "identifier": "com.getflourish.mate.misc.setLineHeight",
+      "shortcut": "cmd l",
+      "script": "Misc/Set Line Height.js"
+    },
+    {
+      "name": "Toggle Click Through",
+      "identifier": "com.getflourish.mate.misc.toggleClickThrough",
+      "shortcut": "shift command y",
+      "script": "Misc/Toggle Click Through.js"
+    },
+    {
+      "name": "Wrap in Bounding Box [broken]",
+      "identifier": "com.getflourish.mate.misc.wrapInBoundingBox",
+      "shortcut": "ctrl shift w",
+      "script": "Misc/Wrap in Bounding Box.js"
+    },
+
+    {
+      "name": "Select Artboard(s)",
+      "identifier": "com.getflourish.mate.select.artboards",
+      "shortcut": "shift cmd a",
+      "script": "Select/Select Artboard(s).js"
+    },
+    {
+      "name": "Select Group Layers",
+      "identifier": "com.getflourish.mate.select.groupLayers",
+      "shortcut": "",
+      "script": "Select/Select Group Layers.js"
+    },
+    {
+      "name": "Select Parent Group",
+      "identifier": "com.getflourish.mate.select.parentGroup",
+      "shortcut": "option cmd g",
+      "script": "Select/Select Parent Group.js"
+    },
+    {
+      "name": "Distribute Horizontally",
+      "identifier": "com.getflourish.mate.smartAlign.distributeHorizontally",
+      "shortcut": "control option cmd ,",
+      "script": "Smart Align/Distribute Horizontally.js"
+    },
+    {
+      "name": "Distribute Vertically",
+      "identifier": "com.getflourish.mate.smartAlign.distributeVertically",
+      "shortcut": "control option cmd .",
+      "script": "Smart Align/Distribute Vertically.js"
+    },
+    {
+      "name": "Stretch",
+      "identifier": "com.getflourish.mate.smartAlign.stretch",
+      "shortcut": "cmd e",
+      "script": "Smart Align/Stretch.js"
+    },
+    {
+      "name": "Smart Align Bottom",
+      "identifier": "com.getflourish.mate.smartAlign.bottom",
+      "shortcut": "control cmd ↓",
+      "script": "Smart Align/Smart Align Bottom.js"
+    },
+    {
+      "name": "Smart Align Horizontally",
+      "identifier": "com.getflourish.mate.smartAlign.horizontally",
+      "shortcut": "control cmd ,",
+      "script": "Smart Align/Smart Align Horizontally.js"
+    },
+    {
+      "name": "Smart Align Left",
+      "identifier": "com.getflourish.mate.smartAlign.left",
+      "shortcut": "control cmd ←",
+      "script": "Smart Align/Smart Align Left.js"
+    },
+    {
+      "name": "Smart Align Right",
+      "identifier": "com.getflourish.mate.smartAlign.right",
+      "shortcut": "control cmd →",
+      "script": "Smart Align/Smart Align Right.js"
+    },
+    {
+      "name": "Smart Align Top",
+      "identifier": "com.getflourish.mate.smartAlign.top",
+      "shortcut": "control cmd ↑",
+      "script": "Smart Align/Smart Align Top.js"
+    },
+    {
+      "name": "Smart Align Vertically",
+      "identifier": "com.getflourish.mate.smartAlign.vertically",
+      "shortcut": "control cmd .",
+      "script": "Smart Align/Smart Align Vertically.js"
+    },
+    {
+      "name": "Space Horizontally",
+      "identifier": "com.getflourish.mate.smartAlign.spaceHorizontally",
+      "shortcut": "command Ö",
+      "script": "Smart Align/Space Horizontally.js"
+    },
+    {
+      "name": "Space Vertically",
+      "identifier": "com.getflourish.mate.smartAlign.spaceVertically",
+      "shortcut": "command Ä",
+      "script": "Smart Align/Space Vertically.js"
+    },
+    {
+      "name": "Delete and Pull [broken]",
+      "identifier": "com.getflourish.mate.smartMove.deleteAndPull",
+      "shortcut": "cmd ⌫",
+      "script": "Smart Move/Delete and Pull.js"
+    },
+    {
+      "name": "Pull Up",
+      "identifier": "com.getflourish.mate.smartMove.pullUp",
+      "shortcut": "shift cmd option ↑",
+      "script": "Smart Move/Pull Up.js"
+    },
+    {
+      "name": "Push Down",
+      "identifier": "com.getflourish.mate.smartMove.pushDown",
+      "shortcut": "shift cmd option ↓",
+      "script": "Smart Move/Push Down.js"
+    },
+    {
+      "name": "Pull Left",
+      "identifier": "com.getflourish.mate.smartMove.pullLeft",
+      "shortcut": "shift cmd option ←",
+      "script": "Smart Move/Pull Left.js"
+    },
+    {
+      "name": "Push Right",
+      "identifier": "com.getflourish.mate.smartMove.pushRight",
+      "shortcut": "shift cmd option →",
+      "script": "Smart Move/Push Right.js"
+    },
+    {
+      "name": "Set Push/Pull Values",
+      "identifier": "com.getflourish.mate.smartMove.setIncrements",
+      "shortcut": "shift cmd option i",
+      "script": "Smart Move/Set Increments.js"
+    }
+
+  ],
+  "menu": {
+    "items": [
+        {
+           "title": "Artboards",
+           "items": [
+                "com.getflourish.mate.artboards.duplicate",
+                "com.getflourish.mate.artboards.fitArtboardHeight",
+                "com.getflourish.mate.artboards.fitArtboard",
+                "com.getflourish.mate.artboards.remove",
+                "com.getflourish.mate.artboards.sortByPosition"
+            ]
+        },
+        {
+           "title": "Misc",
+           "items": [
+                "com.getflourish.mate.misc.gotoArtboard",
+                "com.getflourish.mate.misc.gotoPage",
+                "com.getflourish.mate.misc.replaceLayer",
+                "com.getflourish.mate.misc.setLineHeight",
+                "com.getflourish.mate.misc.toggleClickThrough",
+                "com.getflourish.mate.misc.wrapInBoundingBox"
+            ]
+        },
+        {
+           "title": "Select",
+           "items": [
+                "com.getflourish.mate.select.artboards",
+                "com.getflourish.mate.select.groupLayers",
+                "com.getflourish.mate.select.parentGroup"
+            ]
+        },
+        {
+           "title": "Smart Align",
+           "items": [
+                "com.getflourish.mate.smartAlign.distributeHorizontally",
+                "com.getflourish.mate.smartAlign.distributeVertically",
+                "com.getflourish.mate.smartAlign.top",
+                "com.getflourish.mate.smartAlign.right",
+                "com.getflourish.mate.smartAlign.bottom",
+                "com.getflourish.mate.smartAlign.left",
+                "com.getflourish.mate.smartAlign.horizontally",
+                "com.getflourish.mate.smartAlign.vertically",
+                "com.getflourish.mate.smartAlign.spaceHorizontally",
+                "com.getflourish.mate.smartAlign.spaceVertically",
+                "com.getflourish.mate.smartAlign.stretch"
+            ]
+        },
+        {
+           "title": "Smart Move",
+           "items": [
+                "com.getflourish.mate.smartMove.deleteAndPull",
+                "com.getflourish.mate.smartMove.pullLeft",
+                "com.getflourish.mate.smartMove.pushRight",
+                "com.getflourish.mate.smartMove.pullUp",
+                "com.getflourish.mate.smartMove.pushDown",
+                "com.getflourish.mate.smartMove.setIncrements"
+            ]
+        }
+    ]
+  }
+}
