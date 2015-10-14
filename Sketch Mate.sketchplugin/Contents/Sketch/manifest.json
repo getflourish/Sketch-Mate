@@ -197,8 +197,31 @@
       "identifier": "com.getflourish.mate.smartMove.setIncrements",
       "shortcut": "shift cmd option i",
       "script": "Smart Move/Set Increments.js"
+    },
+    {
+      "name": "Reverse Layer Order",
+      "identifier": "com.getflourish.mate.sort.reverseLayerOrder",
+      "shortcut": "",
+      "script": "Sort/Reverse Layer Order.sketchplugin"
+    },
+    {
+      "name": "Reverse Positions",
+      "identifier": "com.getflourish.mate.sort.reversePositions",
+      "shortcut": "",
+      "script": "Sort/Reverse Positions.sketchplugin"
+    },
+    {
+      "name": "Sort Artboards By Name",
+      "identifier": "com.getflourish.mate.sort.sortArtboardsByName",
+      "shortcut": "",
+      "script": "Sort/Sort Artboards by Name.sketchplugin"
+    },
+    {
+      "name": "Sort Layers",
+      "identifier": "com.getflourish.mate.sort.sortLayers",
+      "shortcut": "ctrl cmd option s",
+      "script": "Sort/Sort Layers.sketchplugin"
     }
-
   ],
   "menu": {
     "items": [
@@ -256,6 +279,15 @@
                 "com.getflourish.mate.smartMove.pullUp",
                 "com.getflourish.mate.smartMove.pushDown",
                 "com.getflourish.mate.smartMove.setIncrements"
+            ]
+        },
+        {
+           "title": "Sort",
+           "items": [
+                "com.getflourish.mate.sort.reverseLayerOrder",
+                "com.getflourish.mate.sort.reversePositions",
+                "com.getflourish.mate.sort.sortArtboardsByName",
+                "com.getflourish.mate.sort.sortLayers"
             ]
         }
     ]
