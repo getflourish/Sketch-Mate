@@ -5,12 +5,11 @@
  */
 
 
-
 var onRun = function (context) {
 
     // old school variable
-    doc = context.document;
-    selection = context.selection;
+    var doc = context.document;
+    var selection = context.selection;
 
 
     // the selection
@@ -71,16 +70,16 @@ var onRun = function (context) {
     // only shift layers if the shift variable is set to true
 
     if (shift == true) shiftLayers(layersToBeMoved);
+    
+    function shiftLayers(layersToBeMoved) {
+        var layer = null;
 
-}
+        for (var i = 0; i < layersToBeMoved.length; i++) {
+            layer = layersToBeMoved[i];
+            layer.frame().setX(layer.frame().x() - offset);
+        }
 
-function shiftLayers(layersToBeMoved) {
-    var layer = null;
-
-    for (var i = 0; i < layersToBeMoved.length; i++) {
-        layer = layersToBeMoved[i];
-        layer.frame().setX(layer.frame().x() - offset);
+        doc.showMessage("Pulled by " + persistent["com.getflourish.increments"] + "px");
     }
-
-    doc.showMessage("Pulled by " + persistent["com.getflourish.increments"] + "px");
 }
+
