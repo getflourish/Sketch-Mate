@@ -1,11 +1,13 @@
 // This plugin reverses the positions of selected layers.
 
 @import '../inventory.js'
+var doc = null;
+var selection = null;
 
 var onRun = function (context) {
 
-    var doc = context.document;
-    var selection = context.selection;
+    doc = context.document;
+    selection = context.selection;
 
     var _selection = null;
     var leftPositions = [];
