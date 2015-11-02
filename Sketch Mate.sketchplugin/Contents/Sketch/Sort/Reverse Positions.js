@@ -2,12 +2,13 @@
 
 @import '../inventory.js'
 
-var doc;
+var doc = null;
+var selection = null;
 
 var onRun = function (context) {
 
     doc = context.document;
-    var selection = context.selection;
+    selection = context.selection;
 
     var _selection = null;
     var leftPositions = [];
@@ -35,7 +36,9 @@ var onRun = function (context) {
     }
 
     // Restore selection
-    com.getflourish.layers.select(_selection);
+    /*if (selection.count() > 1 || (selection.count() == 1 && selection[0].children().count() > 0)) {
+        com.getflourish.layers.select(_selection);
+    }*/
 
     function sortLayers (layers) {
 
