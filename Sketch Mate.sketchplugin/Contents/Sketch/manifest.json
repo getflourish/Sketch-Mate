@@ -203,6 +203,12 @@
       "identifier": "com.getflourish.mate.sort.reverseLayerOrder",
       "shortcut": "",
       "script": "Sort/Reverse Layer Order.js"
+    },
+    {
+      "name": "Reverse Positions",
+      "identifier": "com.getflourish.mate.sort.reversePositions",
+      "shortcut": "",
+      "script": "Sort/Reverse Positions.js"
     }
 
   ],
@@ -267,7 +273,8 @@
         {
            "title": "Sort",
            "items": [
-                "com.getflourish.mate.sort.reverseLayerOrder"
+                "com.getflourish.mate.sort.reverseLayerOrder",
+                "com.getflourish.mate.sort.reversePositions"
             ]
         }
     ]

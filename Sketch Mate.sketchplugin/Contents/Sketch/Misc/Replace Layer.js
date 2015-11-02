@@ -2,11 +2,12 @@
 
 // Replaces the selection with the clipboard contents
 // Calls paste in place and removes the selected layer
+var doc;
 
 var onRun = function (context) {
 
     // old school variable
-    var doc = context.document;
+    doc = context.document;
     var selection = context.selection;
 
     // Make sure a layer is selected
