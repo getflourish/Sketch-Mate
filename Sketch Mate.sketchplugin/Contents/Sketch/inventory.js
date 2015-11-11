@@ -622,7 +622,7 @@ com.getflourish.utils = {
       com.getflourish.utils.sendAction('pasteInPlace:');
   },
   sendPasteOverSelection: function () {
-    my.utils.sendAction('pasteOverSelection:');
+    com.getflourish.utils.sendAction('pasteOverSelection:');
   },
 }
 
