@@ -619,7 +619,7 @@ com.getflourish.utils = {
       com.getflourish.utils.sendAction('moveForward:');
   },
   sendPasteInPlace: function () {
-      com.getflourish.utils.sendAction('pasteInPlace:');
+      com.getflourish.utils.sendAction('pasteOverSelection:');
   },
   sendPasteOverSelection: function () {
     com.getflourish.utils.sendAction('pasteOverSelection:');

@@ -67,19 +67,17 @@ var onRun = function (context) {
     // only shift layers if the shift variable is set to true
 
     if (shift == true) shiftLayers(layersToBeMoved);
+    function shiftLayers(layersToBeMoved) {
+        var layer = null;
 
-}
-
-function shiftLayers(layersToBeMoved) {
-    var layer = null;
-
-    for (var i = 0; i < layersToBeMoved.length; i++) {
-        layer = layersToBeMoved[i];
-        layer.frame().setY(layer.frame().y() - offset);
+        for (var i = 0; i < layersToBeMoved.length; i++) {
+            layer = layersToBeMoved[i];
+            layer.frame().setY(layer.frame().y() - offset);
+        }
     }
-}
 
-// Sorts numbers. By default, sort would handle numbers as strings and thus not sort them as intended.
-function sortNumber(a,b) {
-    return a - b;
+    // Sorts numbers. By default, sort would handle numbers as strings and thus not sort them as intended.
+    function sortNumber(a,b) {
+        return a - b;
+    }
 }

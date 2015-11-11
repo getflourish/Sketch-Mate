@@ -197,6 +197,18 @@
       "identifier": "com.getflourish.mate.smartMove.setIncrements",
       "shortcut": "shift cmd option i",
       "script": "Smart Move/Set Increments.js"
+    },
+    {
+      "name": "Reverse Layer Order",
+      "identifier": "com.getflourish.mate.sort.reverseLayerOrder",
+      "shortcut": "",
+      "script": "Sort/Reverse Layer Order.js"
+    },
+    {
+      "name": "Reverse Positions",
+      "identifier": "com.getflourish.mate.sort.reversePositions",
+      "shortcut": "",
+      "script": "Sort/Reverse Positions.js"
     }
 
   ],
@@ -256,6 +268,13 @@
                 "com.getflourish.mate.smartMove.pullUp",
                 "com.getflourish.mate.smartMove.pushDown",
                 "com.getflourish.mate.smartMove.setIncrements"
+            ]
+        },
+        {
+           "title": "Sort",
+           "items": [
+                "com.getflourish.mate.sort.reverseLayerOrder",
+                "com.getflourish.mate.sort.reversePositions"
             ]
         }
     ]
