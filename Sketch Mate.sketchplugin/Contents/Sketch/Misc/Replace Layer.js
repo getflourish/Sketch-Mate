@@ -22,7 +22,7 @@ var onRun = function (context) {
             selectedLayer.setIsSelected(true);
 
             // Paste in Place
-            com.getflourish.utils.sendPasteInPlace();
+            com.getflourish.utils.sendPasteOverSelection();
 
             // Select the original layer
             doc.currentPage().deselectAllLayers();
