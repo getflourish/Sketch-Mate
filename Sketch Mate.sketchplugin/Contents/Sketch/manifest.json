@@ -50,7 +50,7 @@
     {
       "name": "Sort Layers",
       "identifier": "com.getflourish.mate.sort.sortLayers",
-      "shortcut": "",
+      "shortcut": "ctrl option command s",
       "script": "Sort/Sort Layers.js"
     },
 

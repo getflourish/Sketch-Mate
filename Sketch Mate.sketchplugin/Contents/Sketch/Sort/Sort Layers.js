@@ -1,5 +1,3 @@
-// (ctrl option command s)
-
 /**
  * This plugin can sort layers by positions, layer name or text value
  *
