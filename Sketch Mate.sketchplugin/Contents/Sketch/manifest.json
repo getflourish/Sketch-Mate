@@ -85,6 +85,12 @@
       "script": "Select/Select Artboard(s).js"
     },
     {
+      "name": "Select Below",
+      "identifier": "com.getflourish.mate.select.below",
+      "shortcut": "shift cmd b",
+      "script": "Select/Select Below.js"
+    },
+    {
       "name": "Select Group Layers",
       "identifier": "com.getflourish.mate.select.groupLayers",
       "shortcut": "",
@@ -245,6 +251,7 @@
            "title": "Select",
            "items": [
                 "com.getflourish.mate.select.artboards",
+                "com.getflourish.mate.select.below",
                 "com.getflourish.mate.select.groupLayers",
                 "com.getflourish.mate.select.parentGroup"
             ]
