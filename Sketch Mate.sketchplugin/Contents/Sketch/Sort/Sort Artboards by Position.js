@@ -8,19 +8,19 @@
 @import '../inventory.js'
 
 
+var doc;
+var selection;
+
 // sorts two objects by their left property
 function sortLeft(a,b) {
     return a.left - b.left;
 }
 
-
-
-
 var onRun = function (context) {
 
     // old school variable
-    var doc = context.document;
-    var selection = context.selection;
+    doc = context.document;
+    selection = context.selection;
 
     // at least two artboards need to be selected
     if (selection.count() > 1 && selection[0].className() == "MSArtboardGroup") {
