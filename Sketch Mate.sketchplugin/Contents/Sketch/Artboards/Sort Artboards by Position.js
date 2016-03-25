@@ -14,13 +14,14 @@ function sortLeft(a,b) {
 }
 
 
-
+var doc;
+var selection;
 
 var onRun = function (context) {
 
     // old school variable
-    var doc = context.document;
-    var selection = context.selection;
+    doc = context.document;
+    selection = context.selection;
 
     // at least two artboards need to be selected
     if (selection.count() > 1 && selection[0].className() == "MSArtboardGroup") {
