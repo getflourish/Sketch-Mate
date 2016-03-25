@@ -11,33 +11,36 @@ var onRun = function (context) {
     var doc = context.document;
     var selection = context.selection;
 
-    // Get the current artboard
-    artboard = doc.currentPage().currentArtboard();
+    for (var i = 0; i < selection.count(); i++) {
+        if (selection.objectAtIndex(i).className() == "MSArtboardGroup") {
+            var artboard = selection.objectAtIndex(i);
 
-    // Store some meta data about all layers and their respective bottom position
-    var meta = [];
-    var layers = artboard.children();
+            // Store some meta data about all layers and their respective bottom position
+            var meta = [];
+            var layers = artboard.children();
 
-    // Loop through all children of the artboard
-    for (var i = 0; i < layers.count(); i++) {
+            // Loop through all children of the artboard
+            for (var j = 0; j < layers.count(); j++) {
 
-        // Remember the current layer
-        var layer = layers[i];
+                // Remember the current layer
+                var layer = layers[j];
 
-        if (layer !== undefined && layer.className() != "MSArtboardGroup") {
+                if (layer !== undefined && layer.className() != "MSArtboardGroup") {
 
-            // Calculate the bottom edge position
-            var bottom = layer.frame().y() + layer.frame().height();
-            meta.push({
-                layer: layer,
-                bottom: bottom
-            });
+                    // Calculate the bottom edge position
+                    var bottom = layer.frame().y() + layer.frame().height();
+                    meta.push({
+                        layer: layer,
+                        bottom: bottom
+                    });
+                }
+            }
+
+            // Sort the layers by bottom position, descending
+            meta.sort(sortBottom);
+
+            // Finally set the height of the artboard
+            artboard.frame().setHeight(meta[0].bottom)
         }
     }
-
-    // Sort the layers by bottom position, descending
-    meta.sort(sortBottom);
-
-    // Finally set the height of the artboard
-    artboard.frame().setHeight(meta[0].bottom)
 }
