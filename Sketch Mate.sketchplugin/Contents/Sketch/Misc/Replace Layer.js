@@ -49,7 +49,7 @@ var onRun = function (context) {
         // problem: selection won’t show in inspector and will be lost on click.
 
         coscript.setShouldKeepAround(true)
-        coscript.scheduleWithInterval_jsFunction(1, function (int) {
+        coscript.scheduleWithInterval_jsFunction(0.1, function (int) {
 
             var after = doc.currentPage().children();
 
@@ -69,14 +69,12 @@ var onRun = function (context) {
 
 
 function restoreSelection () {
-    var restore = [];
 
     for (var i = 0; i < diff.count(); i++) {
         if (diff.objectAtIndex(i).name() == reference.name()) {
-            restore.push(diff.objectAtIndex(i))
+            diff.objectAtIndex(i).setIsSelected(true)
        }
     }
-    doc.setSelectedLayers(restore)
-    doc.reloadInspector();
+    NSApp.delegate().refreshCurrentDocument()
 
 }
