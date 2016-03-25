@@ -81,7 +81,7 @@
     {
       "name": "Select Artboard(s)",
       "identifier": "com.getflourish.mate.select.artboards",
-      "shortcut": "shift cmd a",
+      "shortcut": "ctrl cmd a",
       "script": "Select/Select Artboard(s).js"
     },
     {

@@ -11,7 +11,8 @@ var onRun = function (context) {
 
 
     var sel = selection[0];
-    if ([sel className] == "MSArtboardGroup") {
+    if (String(sel.className()) == "MSArtboardGroup") {
+        log("yo artboard")
         var page = [doc currentPage],
             artboards = [page artboards]
 
