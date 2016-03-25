@@ -36,9 +36,22 @@
     },
     {
       "name": "Sort Artboards by Position",
-      "identifier": "com.getflourish.mate.artboards.sortByPosition",
+      "identifier": "com.getflourish.mate.sort.sortArtboardsByPosition",
       "shortcut": "",
-      "script": "Artboards/Sort Artboards by Position.js"
+      "script": "Sort/Sort Artboards by Position.js"
+    },
+    {
+      "name": "Sort Artboards by Name",
+      "identifier": "com.getflourish.mate.sort.sortArtboardsByName",
+      "shortcut": "",
+      "script": "Sort/Sort Artboards by Name.js"
+    },
+
+    {
+      "name": "Sort Layers",
+      "identifier": "com.getflourish.mate.sort.sortLayers",
+      "shortcut": "",
+      "script": "Sort/Sort Layers.js"
     },
 
     {
@@ -115,13 +128,13 @@
       "script": "Smart Align/Distribute Vertically.js"
     },
     {
-      "name": "Stretch",
+      "name": "Stretch Width",
       "identifier": "com.getflourish.mate.smartAlign.stretchWidth",
       "shortcut": "cmd e",
       "script": "Smart Align/Stretch Width.js"
     },
     {
-      "name": "Stretch",
+      "name": "Stretch Height",
       "identifier": "com.getflourish.mate.smartAlign.stretchHeight",
       "shortcut": "cmd option e",
       "script": "Smart Align/Stretch Height.js"
@@ -233,7 +246,6 @@
                 "com.getflourish.mate.artboards.fitArtboardHeight",
                 "com.getflourish.mate.artboards.fitArtboard",
                 "com.getflourish.mate.artboards.remove",
-                "com.getflourish.mate.artboards.sortByPosition"
             ]
         },
         {
@@ -288,7 +300,10 @@
            "title": "Sort",
            "items": [
                 "com.getflourish.mate.sort.reverseLayerOrder",
-                "com.getflourish.mate.sort.reversePositions"
+                "com.getflourish.mate.sort.reversePositions",
+                "com.getflourish.mate.sort.sortArtboardsByName",
+                "com.getflourish.mate.sort.sortArtboardsByPosition",
+                "com.getflourish.mate.sort.sortLayers"
             ]
         }
     ]
