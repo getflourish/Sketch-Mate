@@ -110,9 +110,15 @@
     },
     {
       "name": "Stretch",
-      "identifier": "com.getflourish.mate.smartAlign.stretch",
+      "identifier": "com.getflourish.mate.smartAlign.stretchWidth",
       "shortcut": "cmd e",
-      "script": "Smart Align/Stretch.js"
+      "script": "Smart Align/Stretch Width.js"
+    },
+    {
+      "name": "Stretch",
+      "identifier": "com.getflourish.mate.smartAlign.stretchHeight",
+      "shortcut": "cmd option e",
+      "script": "Smart Align/Stretch Height.js"
     },
     {
       "name": "Smart Align Bottom",
@@ -256,7 +262,8 @@
                 "com.getflourish.mate.smartAlign.vertically",
                 "com.getflourish.mate.smartAlign.spaceHorizontally",
                 "com.getflourish.mate.smartAlign.spaceVertically",
-                "com.getflourish.mate.smartAlign.stretch"
+                "com.getflourish.mate.smartAlign.stretchWidth",
+                "com.getflourish.mate.smartAlign.stretchHeight"
             ]
         },
         {
