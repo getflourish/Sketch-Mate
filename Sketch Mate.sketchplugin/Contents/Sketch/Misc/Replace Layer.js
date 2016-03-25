@@ -3,6 +3,10 @@
 // Replaces the selection with the clipboard contents
 // Calls paste in place and removes the selected layer
 var doc;
+var diff;
+var selectedLayers;
+var reference;
+
 
 var onRun = function (context) {
 
@@ -12,7 +16,11 @@ var onRun = function (context) {
 
     // Make sure a layer is selected
 
-    var selectedLayers = selection;
+    selectedLayers = selection;
+
+    var before = doc.currentPage().children();
+
+    var newLayers;
 
     if (selectedLayers.count() > 0) {
         doc.currentPage().deselectAllLayers();
@@ -25,6 +33,8 @@ var onRun = function (context) {
             // Paste in Place
             com.getflourish.utils.sendPasteOverSelection();
 
+            reference = context.document.findSelectedLayers()[0];
+
             // Select the original layer
             doc.currentPage().deselectAllLayers();
 
@@ -34,8 +44,39 @@ var onRun = function (context) {
             // Remove
             com.getflourish.utils.sendDelete();
         }
-        com.getflourish.layers.select(selectedLayers);
+
+        // HACK to restore the selection;
+        // problem: selection won’t show in inspector and will be lost on click.
+
+        coscript.setShouldKeepAround(true)
+        coscript.scheduleWithInterval_jsFunction(1, function (int) {
+
+            var after = doc.currentPage().children();
+
+            var arrayOneCopy = [NSMutableArray arrayWithArray:after];
+            [arrayOneCopy removeObjectsInArray:before];
+
+            diff = arrayOneCopy
+
+            restoreSelection(diff);
+        });
+
+
     } else {
         doc.showMessage("Please select a layer.");
     }
+}
+
+
+function restoreSelection () {
+    var restore = [];
+
+    for (var i = 0; i < diff.count(); i++) {
+        if (diff.objectAtIndex(i).name() == reference.name()) {
+            restore.push(diff.objectAtIndex(i))
+       }
+    }
+    doc.setSelectedLayers(restore)
+    doc.reloadInspector();
+
 }
