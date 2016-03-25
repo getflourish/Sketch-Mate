@@ -20,9 +20,54 @@ var sortIndex = 0;
 var layersMeta = [];
 var leftPositions = [];
 var topPositions = [];
+var doc;
 
+
+
+var onRun = function (context) {
+
+    // old school variable
+    doc = context.document;
+    selection = context.selection;
+
+
+    // Run
+    if (selection.count() > 1) {
+
+        // remember the selection
+        _selection = selection;
+
+        // sort selected layers
+        sortLayers(selection);
+    } else if (selection.count() == 1 && selection[0].children().count() > 0){
+
+        // remember the selection
+        _selection = selection;
+
+        var group = _selection[0];
+
+        // sort selected group
+        sortLayers(group.layers().array());
+    } else {
+        [doc showMessage:"Cannot sort single layers."]
+    }
+
+    var layersMetaArray = [];
+
+    for (var i = 0; i < layersMeta.length; i++) {
+        layersMetaArray.push(layersMeta[i].layer);
+    }
+
+    layersMetaArray.reverse();
+    com.getflourish.layers.sortIndices(layersMetaArray);
+
+    // Restore selection
+    com.getflourish.layers.select(_selection);
+}
 
 function sortLayers (_selection) {
+
+    log(_selection)
 
 	// Loop through all selected layers
 
@@ -185,38 +230,6 @@ function sortLayers (_selection) {
 	}
 }
 
-// Run
-if (selection.count() > 1) {
-
-    // remember the selection
-    _selection = selection;
-
-    // sort selected layers
-    sortLayers(selection);
-} else if (selection.count() == 1 && selection[0].children().count() > 0){
-
-    // remember the selection
-    _selection = selection;
-
-    var group = _selection[0];
-
-    // sort selected group
-    sortLayers(group.layers().array());
-} else {
-    [doc showMessage:"Cannot sort single layers."]
-}
-
-var layersMetaArray = [];
-
-for (var i = 0; i < layersMeta.length; i++) {
-    layersMetaArray.push(layersMeta[i].layer);
-}
-
-layersMetaArray.reverse();
-com.getflourish.layers.sortIndices(layersMetaArray);
-
-// Restore selection
-com.getflourish.layers.select(_selection);
 
 
 // Sorts text layer strings in a ascending order
@@ -391,10 +404,3 @@ function sendForward() {
 function sendBack() {
 	sendAction('moveToBack:');
 }
-
-var numberOfTextLayersPerGroup = null;
-var sortableValues = null;
-var sortIndex = null;
-var layersMeta = null;
-var leftPositions = null;
-var topPositions = null;
