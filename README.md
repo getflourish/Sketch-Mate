@@ -13,21 +13,28 @@ These plugins will make you best friends with Sketch.
 * Sort Artboards
 
 #### Misc
+* Goto Page
 * Replace Layer `⌘` + `⌥` + `R`
+* Set Line Height
+* Toggle Click Through
+* Wrap in Bounding Box
 
 #### Smart Align
+* Distribute Horizontally `control` + `⌘` + `⌥` + `,`
+* Distribute Vertically `control` + `⌘` + `⌥` + `.`
 * Smart Align Horizontally `⌘` + `⌥` + `,`
 * Smart Align Vertically `⌘` + `⌥` + `.`
 * Smart Align Bottom `control` + `⌘` + `↓`
 * Smart Align Left `control` + `⌘` + `←`
 * Smart Align Right `control` + `⌘` + `→`
 * Smart Align Top `control` + `⌘` + `↑`
-* Distribute Horizontally `control` + `⌘` + `⌥` + `,`
-* Distribute Vertically `control` + `⌘` + `⌥` + `.`
-* Space Horizontal
-* Space Vertical
+* Space Horizontally
+* Space Vertically
+* Stretch Height `⌘` + `⌥` + `e`
+* Stretch Width `⌘` + `e`
 
 #### Smart Move
+* Delete and Pull `⌘` + `⌫`
 * Pull Left `shift` + `⌘` + `⌥` + `←`
 * Pull Up `shift` + `⌘` + `⌥` + `↑`
 * Push Down `shift` + `⌘` + `⌥` + `↓`
@@ -35,12 +42,10 @@ These plugins will make you best friends with Sketch.
 * Set Increments `shift` + `⌘` + `⌥` + `I`
 
 #### Sort
-* Sort Layers `ctrl` + `⌘` + `⌥` + `S`
-* Reverse Positions
 * Reverse Layer Order
-
-#### Text
-Set Line Height `⌘` + `L`
+* Reverse Positions
+* Sort Artboards by Name
+* Sort Layers `ctrl` + `⌘` + `⌥` + `S`
 
 
 ## Installation
@@ -123,12 +128,12 @@ Replaces the selected layer with the content in the clipboard. Basically this pl
 ## Smart Align
 
 ### Distribute Horizontally
-Calls the menu command "Distribute Horizontally". Just for shortcut purposes. 
+Calls the menu command "Distribute Horizontally". Just for shortcut purposes.
 
 **Shortcut:** `ctrl` + `⌘` + `⌥` + `,`
 
 ### Distribute Vertically
-Calls the menu command "Distribute Vertically". Just for shortcut purposes. 
+Calls the menu command "Distribute Vertically". Just for shortcut purposes.
 
 **Shortcut:** `ctrl` + `⌘` + `⌥` + `.`
 
