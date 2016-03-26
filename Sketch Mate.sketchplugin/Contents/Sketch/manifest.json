@@ -188,7 +188,7 @@
       "script": "Smart Align/Space Vertically.js"
     },
     {
-      "name": "Delete and Pull [broken]",
+      "name": "Delete and Pull",
       "identifier": "com.getflourish.mate.smartMove.deleteAndPull",
       "shortcut": "cmd ⌫",
       "script": "Smart Move/Delete and Pull.js"
