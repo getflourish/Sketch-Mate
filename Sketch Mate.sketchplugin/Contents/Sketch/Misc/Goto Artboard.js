@@ -8,10 +8,12 @@
  * Florian Schulz Copyright 2014, MIT License
  */
 
+var doc
+
 var onRun = function (context) {
 
   // old school variable
-  var doc = context.document;
+  doc = context.document;
   
   // put all artboards in a list with name and artboard reference
   var artboards = doc.currentPage().artboards();

@@ -57,7 +57,7 @@
     {
       "name": "Goto Artboard",
       "identifier": "com.getflourish.mate.misc.gotoArtboard",
-      "shortcut": "",
+      "shortcut": "option cmd p",
       "script": "Misc/Goto Artboard.js"
     },
     {

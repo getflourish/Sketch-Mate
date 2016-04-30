@@ -565,11 +565,11 @@ com.getflourish.view = {
     centerTo: function(layer) {
       var selected_object = layer;
       var view = doc.currentView();
-      view.centerRect(selected_object.absoluteRect());
+      view.centerRect(selected_object.rect());
   },
   zoomTo: function (layer) {
       var view = doc.currentView();
-      view.zoomToFitRect(layer.absoluteRect());
+      view.zoomToFitRect(layer.rect());
   }
 }
 
