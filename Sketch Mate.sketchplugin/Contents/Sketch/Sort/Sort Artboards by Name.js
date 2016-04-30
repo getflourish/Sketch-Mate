@@ -9,6 +9,12 @@
 
 @import '../inventory.js'
 
+var doc;
+var selection;
+
+// Run
+var onRun = function (context) {
+
 var artboards = false;
 var keepTop = false;
 var keepLeft = false;
@@ -107,7 +113,8 @@ function sortLayers (_selection) {
 	}
 }
 
-// Run
+// old school variable
+doc = context.document;
 
 sortLayers(doc.currentPage().artboards());
 var layersMetaArray = [];
@@ -199,3 +206,4 @@ var sortIndex = null;
 var layersMeta = null;
 var leftPositions = null;
 var topPositions = null;
+}
