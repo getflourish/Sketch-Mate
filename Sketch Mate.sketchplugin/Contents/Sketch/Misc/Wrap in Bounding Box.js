@@ -4,6 +4,8 @@
 var doc;
 var selection;
 
+var onRun = function (context) {
+
 function wrap (layer) {
 	var parent;
 
@@ -42,7 +44,9 @@ function wrap (layer) {
 	box.style().fills().addNewStylePart();
 	box.style().fill().setFillType(0);
 
-	color = MSColor.colorWithNSColor(NSColor.colorWithHex_alpha(hex_string, 0.1));
+	// color = MSColor.colorWithNSColor(NSColor.colorWithHex_alpha(hex_string, 0.1));
+	color = MSColor.colorWithSVGString(hex_string)
+	color.alpha = 0.1
 
 	box.style().fill().setColor(color)
 
@@ -58,7 +62,8 @@ function wrap (layer) {
 
 	box.setIsLocked(true);
 
-	parent.resizeRoot(true);
+  // parent.resizeRoot(true);
+	parent.resizeToFitChildrenWithOption(true);
 	box.setIsSelected(false);
 	parent.setIsSelected(true);
 
@@ -129,7 +134,7 @@ log(persistent)
 
 }
 
-var onRun = function (context) {
+
 
     // old school variable
     doc = context.document;
