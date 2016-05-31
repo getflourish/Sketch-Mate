@@ -37,7 +37,7 @@ var onRun = function (context) {
         }
 
     }
-    var action = doc.actionsController().actionWithName("MSCanvasActions");
+    var action = doc.actionsController().actionWithID("MSCanvasActions");
     action.duplicate(nil);
 
 }
