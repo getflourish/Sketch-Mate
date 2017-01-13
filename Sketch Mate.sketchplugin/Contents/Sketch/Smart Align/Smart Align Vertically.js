@@ -46,7 +46,7 @@ var onRun = function (context) {
         // deselect parent
         parent.setIsSelected(false);
 
-    } else if (selection.count() == 2) {
+    } else if (selection.count() >= 2) {
         // align layers
         com.getflourish.utils.sendAlignVertically();
 
