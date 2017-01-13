@@ -1,57 +1,56 @@
-// Sets the line height as multiple of the font size (cmd l)
-
-
-
 var onRun = function (context) {
+  var doc = context.document;
+  var selection = context.selection;
 
-    // old school variable
-    doc = context.document;
-    selection = context.selection;
+  // Sets the line height as multiple of the font size (cmd l)
 
+  var textLayers = [];
 
-    var textLayers = [];
+  if (selection.count() > 0) {
 
-    if (selection.count() > 0) {
+  	// Loop through selected layers
+  	for (var i = 0; i < selection.count(); i++) {
 
-        // Loop through selected layers
-        for (var i = 0; i < selection.length(); i++) {
+  		var s = selection[i];
 
-            var s = selection[i];
+  		// Check if the layer is a text layer
+  		if (s.className() == "MSTextLayer"){
+  			textLayers.push(s);
+  	  	}
+  	}
 
-            // Check if the layer is a text layer
-            if (s.className() == "MSTextLayer"){
-                textLayers.push(s);
-            }
-        }
+  	if (textLayers.length > 0) {
 
-        if (textLayers.length > 0) {
+  		// get first text layer
+  		var firstTextLayer = textLayers[0];
 
-            // get first text layer
-            var firstTextLayer = textLayers[0];
+  		// Calculate initial line height
+  		var fontSize = firstTextLayer.fontSize();
+  		var lineHeight = firstTextLayer.lineHeight();
 
-            // Calculate initial line height
-            var fontSize = firstTextLayer.fontSize();
-            var lineHeight = firstTextLayer.lineSpacing();
-            var multiple = (lineHeight / fontSize).toFixed(1);
+      // Sketch returns 0 as a value when line height is set to "auto"
+      if (!lineHeight) lineHeight = fontSize;
 
-            // Show a dialog, asking for the line height multiple
-            var lineSpacing = parseFloat([doc askForUserInput:"Line Height Multiple:" initialValue:multiple]);
+  		var multiple = (lineHeight / fontSize).toFixed(1);
 
-            for (var j = 0; j < textLayers.length; j++) {
+  		// Show a dialog, asking for the line height multiple
+  		var lineSpacing = parseFloat([doc askForUserInput:"Line Height Multiple:" initialValue:multiple]);
 
-                var textLayer = textLayers[j];
+  		for (var j = 0; j < textLayers.length; j++) {
 
-                // Calculate the line height based on the font size and multiple
-                var fontSize = textLayer.fontSize();
-                var lineHeight = fontSize * lineSpacing;
-                textLayer.setLineSpacing(lineHeight);
-            }
+  			var textLayer = textLayers[j];
 
-        } else {
-            doc.showMessage("Please select a text layer.");
-        }
-    } else {
-        doc.showMessage("Please select a text layer.")
-    }
+  			// Calculate the line height based on the font size and multiple
+  			var fontSize = textLayer.fontSize();
+  			var lineHeight = fontSize * lineSpacing;
+  			textLayer.setLineHeight(lineHeight);
+  		}
+
+  	} else {
+  		doc.showMessage("Please select a text layer.");
+  	}
+  } else {
+  	doc.showMessage("Please select a text layer.")
+  }
 
 }
