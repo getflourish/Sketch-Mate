@@ -16,6 +16,14 @@ function sortLeft(a,b) {
     return a.left - b.left;
 }
 
+// sorts two objects by their vertical, then horizontal position
+function sortTopLeft(a,b) {
+    var topDiff = a.top - b.top;
+    if (topDiff != 0) { return topDiff; }
+    return a.left - b.left;
+}
+
+
 var onRun = function (context) {
 
     // old school variable
@@ -29,14 +37,16 @@ var onRun = function (context) {
         for (var i = 0; i < selection.count(); i++) {
             var layer = selection[i];
             var left = layer.frame().x();
+            var top = layer.frame().y();
             layersMeta.push({
                 layer: layer,
-                left: left
+                left: left,
+                top: top
             });
         }
 
-        // sort artboards by their left position
-        layersMeta.sort(sortLeft);
+        // sort artboards by their top-left corner position
+        layersMeta.sort(sortTopLeft);
 
         // convert the array of meta objects to a flat array of artboard layers
         var layersMetaArray = [];
