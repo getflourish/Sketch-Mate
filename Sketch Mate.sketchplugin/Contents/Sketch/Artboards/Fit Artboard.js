@@ -30,7 +30,7 @@ var onRun = function (context) {
         // Remember the current layer
         var layer = layers[i];
 
-        if (layer !== undefined && layer.className() != "MSArtboardGroup") {
+        if (layer !== undefined && layer.className() != "MSArtboardGroup" && layer.isVisible() == true) {
 
             // Calculate the bottom edge position
             var bottom = layer.frame().y() + layer.frame().height();
