@@ -34,7 +34,7 @@ var onRun = function (context) {
     offset = persistent["com.getflourish.increments"];
 
     // loop through all layers on the same level as the parent group
-    var layers = parent.layers().array().objectEnumerator();
+    var layers = parent.layers().objectEnumerator();
     while (layer = layers.nextObject()) {
         if (layer != parent && selected != layer.parentGroup()) {
 

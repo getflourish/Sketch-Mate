@@ -2,7 +2,7 @@
 
 // Sort function, descending
 function sortBottom(a, b) {
-	return b.bottom - a.bottom;
+    return b.bottom - a.bottom;
 }
 
 var onRun = function (context) {
@@ -10,7 +10,7 @@ var onRun = function (context) {
     // old school variable
     var doc = context.document;
     var selection = context.selection;
-		var artboards = [doc.currentPage().currentArtboard()];
+        var artboards = [doc.currentPage().currentArtboard()];
 
     for (var i = 0; i < selection.count(); i++) {
         if (selection.objectAtIndex(i).className() == "MSArtboardGroup") {
@@ -18,36 +18,36 @@ var onRun = function (context) {
         }
     }
 
-		for (var i = 0; i < artboards.length; i++) {
-			fitArtboard(artboards[i]);
-		}
+        for (var i = 0; i < artboards.length; i++) {
+            fitArtboard(artboards[i]);
+        }
 }
 
 function fitArtboard(artboard) {
-	// Store some meta data about all layers and their respective bottom position
-	var meta = [];
-	var layers = artboard.children();
+    // Store some meta data about all layers and their respective bottom position
+    var meta = [];
+    var layers = artboard.children();
 
-	// Loop through all children of the artboard
-	for (var j = 0; j < layers.count(); j++) {
+    // Loop through all children of the artboard
+    for (var j = 0; j < layers.count(); j++) {
 
-			// Remember the current layer
-			var layer = layers[j];
+            // Remember the current layer
+            var layer = layers[j];
 
-			if (layer !== undefined && layer.className() != "MSArtboardGroup") {
+            if (layer !== undefined && layer.className() != "MSArtboardGroup") {
 
-					// Calculate the bottom edge position
-					var bottom = layer.frame().y() + layer.frame().height();
-					meta.push({
-							layer: layer,
-							bottom: bottom
-					});
-			}
-	}
+                    // Calculate the bottom edge position
+                    var bottom = layer.frame().y() + layer.frame().height();
+                    meta.push({
+                            layer: layer,
+                            bottom: bottom
+                    });
+            }
+    }
 
-	// Sort the layers by bottom position, descending
-	meta.sort(sortBottom);
+    // Sort the layers by bottom position, descending
+    meta.sort(sortBottom);
 
-	// Finally set the height of the artboard
-	artboard.frame().setHeight(meta[0].bottom)
+    // Finally set the height of the artboard
+    artboard.frame().setHeight(meta[0].bottom)
 }
