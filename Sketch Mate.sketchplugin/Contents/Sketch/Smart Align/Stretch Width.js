@@ -26,6 +26,4 @@ var onRun = function (context) {
     } else {
         frame.setWidth(parent.frame().width());
     }
-
-    if (layer.name().indexOf("@fullwidth") == -1) layer.setName(layer.name() + " @fullwidth");
 }
