@@ -26,6 +26,4 @@ var onRun = function (context) {
     } else {
         frame.setHeight(parent.frame().height());
     }
-
-    if (layer.name().indexOf("@fullheight") == -1) layer.setName(layer.name() + " @fullheight");
 }
