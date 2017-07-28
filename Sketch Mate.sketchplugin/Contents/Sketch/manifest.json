@@ -7,7 +7,7 @@
   "appcast": "https://raw.githubusercontent.com/getflourish/Sketch-Mate/master/appcast.xml",
   "identifier": "com.getflourish.sketch.mate",
   "updateURL": "https://github.com/downloads/example/sketchplugins/sketchplugins.json",
-  "compatibleVersion": 4.5.2,
+  "compatibleVersion": "4.5.2",
   "bundleVersion": 1,
   "commands": [
 
