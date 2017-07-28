@@ -20,8 +20,14 @@ var onRun = function (context) {
 
     // Make sure an artboard is selected
     var selectedArtboard = doc.currentPage().currentArtboard();
-    doc.currentPage().deselectAllLayers();
-    selectedArtboard.setIsSelected(true);
+    var page = doc.currentPage()
+
+		// deselect all layers
+		deselectAllLayers(page);
+
+		// select current artboard
+		page.changeSelectionBySelectingLayers_([selectedArtboard]);
+
     var width = selectedArtboard.frame().width();
 
     artboards = doc.currentPage().artboards();
@@ -40,4 +46,12 @@ var onRun = function (context) {
     var action = doc.actionsController().actionForID("MSDuplicateAction");
     action.duplicate(null);
 
+}
+
+function deselectAllLayers (page) {
+    if (page.deselectAllLayers) {
+        page.deselectAllLayers();
+    } else {
+        page.changeSelectionBySelectingLayers_([]);
+    }
 }
