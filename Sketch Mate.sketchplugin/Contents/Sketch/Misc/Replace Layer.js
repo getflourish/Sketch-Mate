@@ -23,23 +23,24 @@ var onRun = function (context) {
     var newLayers;
 
     if (selectedLayers.count() > 0) {
-        doc.currentPage().deselectAllLayers();
+        deselectAllLayers(doc.currentPage());
 
         for (var i = 0; i < selectedLayers.count(); i++) {
             // Remember the selected layer
             var selectedLayer = selectedLayers[i];
-            selectedLayer.setIsSelected(true);
+            doc.currentPage().changeSelectionBySelectingLayers_([selectedLayer]);
 
             // Paste in Place
             com.getflourish.utils.sendPasteOverSelection();
 
-            reference = context.document.findSelectedLayers()[0];
+            // NOTE: not sure what this does. Seems to work without it.
+            // reference = context.document.findSelectedLayers()[0];
 
             // Select the original layer
-            doc.currentPage().deselectAllLayers();
+            deselectAllLayers(doc.currentPage());
 
             // Select again
-            selectedLayer.setIsSelected(true);
+            doc.currentPage().changeSelectionBySelectingLayers_([selectedLayer]);
 
             // Remove
             com.getflourish.utils.sendDelete();
@@ -71,10 +72,26 @@ var onRun = function (context) {
 function restoreSelection () {
 
     for (var i = 0; i < diff.count(); i++) {
-        if (diff.objectAtIndex(i).name() == reference.name()) {
-            diff.objectAtIndex(i).setIsSelected(true)
-       }
+        // if (diff.objectAtIndex(i).name() == reference.name()) { // not sure what this does. Seems to work without it.
+            expandSelectionWithLayer(diff.objectAtIndex(i));
+       // }
     }
     NSApp.delegate().refreshCurrentDocument()
 
+}
+
+function deselectAllLayers (page) {
+    if (page.deselectAllLayers) {
+        page.deselectAllLayers();
+    } else {
+        page.changeSelectionBySelectingLayers_([]);
+    }
+}
+
+function expandSelectionWithLayer (layer) {
+    if (MSApplicationMetadata.metadata().appVersion > 45) {
+        layer.select_byExpandingSelection(true, true);
+    } else {
+        layer.select_byExtendingSelection(true, true);
+    }
 }
