@@ -1,5 +1,3 @@
-// (cmd ⌫)
-
 /**
  * This plugin deletes the selected layer and pulls all layers below up
  */
