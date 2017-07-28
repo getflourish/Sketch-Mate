@@ -34,7 +34,7 @@ These plugins will make you best friends with Sketch.
 * Stretch Width `⌘` + `e`
 
 #### Smart Move
-* Delete and Pull `⌘` + `⌫`
+* Delete and Pull
 * Pull Left `shift` + `⌘` + `⌥` + `←`
 * Pull Up `shift` + `⌘` + `⌥` + `↑`
 * Push Down `shift` + `⌘` + `⌥` + `↓`
