@@ -1,5 +1,7 @@
 @import '../inventory.js'
 
+// (cmd ⌫)
+
 // Removes the current artboard
 // If there are other artboards nearby, they will be moved towards the place of the old artboard.
 // You can have any layer selected, no need to select the artboard before duplication :)
@@ -15,7 +17,8 @@ var onRun = function (context) {
     com.getflourish.common.init(context);
 
     // Make sure an artboard is selected
-    var selectedArtboard = doc.currentPage().currentArtboard();
+    var page = doc.currentPage();
+    var selectedArtboard = page.currentArtboard();
 
     if (selectedArtboard) {
         var width = selectedArtboard.frame().width();
@@ -37,20 +40,20 @@ var onRun = function (context) {
         }
 
         // deselect
-        doc.currentPage().deselectAllLayers();
+        deselectAllLayers(page)
 
         // Make sure artboard is selected
-        selectedArtboard.setIsSelected(true);
+        page.changeSelectionBySelectingLayers_([selectedArtboard]);
 
         // Delete the current artboard
         com.getflourish.utils.sendDelete();
 
         // deselect
-        doc.currentPage().deselectAllLayers();
+        deselectAllLayers(page);
 
         // select next artboard
         var next = doc.currentPage().artboards().objectAtIndex(found);
-        next.setIsSelected(true);
+        page.changeSelectionBySelectingLayers_([next]);
 
         // todo: refresh canvas, so that the removed artboard shadow is not visible anymore (e.g. add/remove layer)
     } else {
@@ -58,4 +61,11 @@ var onRun = function (context) {
     }
 
 
+}
+function deselectAllLayers (page) {
+    if (page.deselectAllLayers) {
+        page.deselectAllLayers();
+    } else {
+        page.changeSelectionBySelectingLayers_([]);
+    }
 }
