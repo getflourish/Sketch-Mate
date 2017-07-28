@@ -6,7 +6,7 @@
     <description>These plugins will make you best friends with Sketch.</description>
     <language>en</language>
     <item>
-      <title>Version 1.2.2</title>
+      <title>Version 1.2.3</title>
       <description>
         <![CDATA[
           <ul>
@@ -14,7 +14,7 @@
           </ul>
         ]]>
       </description>
-      <enclosure url="https://github.com/getflourish/Sketch-Mate/archive/master.zip" sparkle:version="1.2.2" />
+      <enclosure url="https://github.com/getflourish/Sketch-Mate/archive/master.zip" sparkle:version="1.2.3" />
     </item>
   </channel>
 </rss>
