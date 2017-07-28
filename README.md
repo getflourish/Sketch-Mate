@@ -74,7 +74,7 @@ This improves the built in behavior of artboard duplication in Sketch. If the se
 
 **Shortcut:** `shift` + `⌘` + `D`
 
-![Duplicate Artboard Animation](https://dl.dropboxusercontent.com/u/974773/_keepalive/Style%20Inventory/Duplicate%20Artboard.gif)
+![Duplicate Artboard Animation](https://d26dzxoao6i3hh.cloudfront.net/items/3G3Y36281g451R0g240m/Duplicate%20Artboard.gif?v=b480cb36)
 
 ### Remove Artboard
 
@@ -82,7 +82,7 @@ This improves the built in behavior of artboard removal in Sketch. If the select
 
 **Shortcut:** `⌘` + `⌫` (Backspace)
 
-![Remove Artboard Animation](https://dl.dropboxusercontent.com/u/974773/_keepalive/Style%20Inventory/Remove%20Artboard.gif)
+![Remove Artboard Animation](https://d26dzxoao6i3hh.cloudfront.net/items/2w2A0J1F1c0E1Z3d3f0e/Remove%20Artboard.gif?v=65b75ab7)
 
 
 ### Fit Artboard
@@ -96,7 +96,7 @@ Resizes the artboard to fit the height of its layers.
 
 **Shortcut:** `shift` + `ctrl` + `A`
 
-![Resize Artboard Animation](https://dl.dropboxusercontent.com/u/974773/_keepalive/Style%20Inventory/Resize%20Artboard.gif)
+![Resize Artboard Animation](https://d26dzxoao6i3hh.cloudfront.net/items/27453E17311M3m0y183Z/Resize%20Artboard.gif?v=9cb1c381)
 
 
 ### Sort Artboards
@@ -112,7 +112,7 @@ Plugin that allows you to set the line height of a text layer as a multiple of t
 
 **Shortcut:** `⌘` + `L`
 
-![Screenshot](https://dl.dropboxusercontent.com/u/974773/_keepalive/Sketch-Line-Height.png)
+![Screenshot](https://cl.ly/37182K2e1L46/Sketch-Line-Height.png)
 
 
 ## Misc
@@ -123,7 +123,7 @@ Replaces the selected layer with the content in the clipboard. Basically this pl
 
 **Shortcut:** `⌥` + `cmd` + `R`
 
-![Animation](https://dl.dropboxusercontent.com/u/974773/_keepalive/Style%20Inventory/Replace%20Layer.gif)
+![Animation](https://cl.ly/2t2T0w0N2J2R/Replace%20Layer.gif)
 
 ## Smart Align
 
@@ -151,7 +151,7 @@ Calls the menu command "Distribute Vertically". Just for shortcut purposes.
 ### Space Horizontal
 Distributes the selected elements horizontally, with the same distante beetween them. If only one layer is selected, the layer will be moved by the spacing that has been input.
 
-![Screenshot](https://dl.dropboxusercontent.com/u/974773/_keepalive/Style%20Inventory/Space.gif)
+![Screenshot](https://cl.ly/372L3T32293Z/Space.gif)
 
 ### Space Vertical
 Distributes the selected elements vertically, with the same distante beetween them. If only one layer is selected, the layer will be moved by the spacing that has been input.
@@ -165,7 +165,7 @@ Distributes the selected elements vertically, with the same distante beetween th
 * Push Down `shift` + `⌘` + `⌥` + `↓`
 * Push Right `shift` + `⌘` + `⌥` + `→`
 
-![Screenshot](https://dl.dropboxusercontent.com/u/974773/_keepalive/Style%20Inventory/Smart%20Move.gif)
+![Screenshot](https://cl.ly/3k1G2X0K1R0A/Smart%20Move.gif)
 
 ## Sorting
 
@@ -178,7 +178,7 @@ There are also plugins to reverse the order of the layers in the layer list and 
 **Shortcut:** `ctrl` + `⌘` + `⌥` + `S`
 
 ## Sorting Layers by text, visually
-![Selection Animation](https://dl.dropboxusercontent.com/u/974773/_keepalive/Style%20Inventory/Sorting.gif)
+![Selection Animation](https://cl.ly/0B1H122X0C3I/Sorting.gif)
 
 ## Sorting Layers in the layer list by position
-![Selection Animation](https://dl.dropboxusercontent.com/u/974773/_keepalive/Style%20Inventory/Sorting%20Layers%202.gif)
+![Selection Animation](https://cl.ly/1x0U3R3k0v3A/Sorting%20Layers%202.gif)
