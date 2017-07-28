@@ -3,11 +3,11 @@
   "description": "These plugins will make you best friends with Sketch",
   "author": "Florian Schulz",
   "homepage": "https://github.com/getflourish/Sketch-Mate",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "appcast": "https://raw.githubusercontent.com/getflourish/Sketch-Mate/master/appcast.xml",
   "identifier": "com.getflourish.sketch.mate",
   "updateURL": "https://github.com/downloads/example/sketchplugins/sketchplugins.json",
-  "compatibleVersion": 4.5,
+  "compatibleVersion": 4.5.2,
   "bundleVersion": 1,
   "commands": [
 
