@@ -14,7 +14,7 @@
           </ul>
         ]]>
       </description>
-      <enclosure url="https://github.com/getflourish/Sketch-Mate/archive/master.zip" sparkle:version="1.2" type="application/octet-stream" />
+      <enclosure url="https://github.com/getflourish/Sketch-Mate/archive/master.zip" sparkle:version="1.2.1" type="application/octet-stream" />
     </item>
   </channel>
 </rss>
