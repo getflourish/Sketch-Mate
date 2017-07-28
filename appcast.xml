@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Sketch Mate</title>
-    <link></link>
+    <link>https://raw.githubusercontent.com/getflourish/Sketch-Mate/master/appcast.xml</link>
     <description>These plugins will make you best friends with Sketch.</description>
     <language>en</language>
     <item>
