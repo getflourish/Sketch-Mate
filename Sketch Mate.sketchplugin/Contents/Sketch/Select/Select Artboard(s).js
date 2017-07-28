@@ -8,15 +8,13 @@ var onRun = function (context) {
     // old school variable
     doc = context.document;
     selection = context.selection;
-
-
     var sel = selection[0];
-    if (String(sel.className()) == "MSArtboardGroup") {
-        log("yo artboard")
-        var page = [doc currentPage],
-            artboards = [page artboards]
+    var page = [doc currentPage],
+        artboards = [page artboards]
 
-        [page deselectAllLayers]
+    if (String(sel.className()) == "MSArtboardGroup") {
+
+        deselectAllLayers(page);
 
         var bottom;
         var loop = [artboards objectEnumerator]
@@ -30,14 +28,23 @@ var onRun = function (context) {
         // collapse artboards
         com.getflourish.utils.sendAction("collapseGroupsInLayerList:");
     } else {
-        [[doc currentPage] deselectAllLayers];
-        [[[doc currentPage] currentArtboard] select:true byExpandingSelection:true]
+        deselectAllLayers(page)
+        page.changeSelectionBySelectingLayers_([page.currentArtboard()]);
     }
 
     if (selection.count() > 1 && [sel className] == "MSArtboardGroup") {
-        com.getflourish.layers.select(doc.currentPage().artboards());
+        doc.currentPage().changeSelectionBySelectingLayers_(artboards);
 
         // collapse artboards
         com.getflourish.utils.sendAction("collapseGroupsInLayerList:");
+    }
+}
+
+
+function deselectAllLayers (page) {
+    if (page.deselectAllLayers) {
+        page.deselectAllLayers();
+    } else {
+        page.changeSelectionBySelectingLayers_([]);
     }
 }
