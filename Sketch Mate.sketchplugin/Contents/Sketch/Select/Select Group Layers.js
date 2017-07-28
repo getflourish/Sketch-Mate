@@ -7,15 +7,25 @@ var onRun = function (context) {
     doc = context.document;
     selection = context.selection;
 
+    var page = doc.currentPage();
+
     if (selection.count() == 1) {
         if (selection[0].className() == "MSLayerGroup") {
             var group = selection[0];
-            doc.currentPage().deselectAllLayers();
-            for (var i = 0; i < group.layers().count(); i++) {
-                group.layers().objectAtIndex(i).setIsSelected(true);
-            }
+
+            deselectAllLayers(page);
+
+            page.changeSelectionBySelectingLayers_(group.layers());
         }
     } else {
         doc.showMessage("Please select a layer group");
+    }
+}
+
+function deselectAllLayers (page) {
+    if (page.deselectAllLayers) {
+        page.deselectAllLayers();
+    } else {
+        page.changeSelectionBySelectingLayers_([]);
     }
 }
