@@ -28,14 +28,28 @@ var onRun = function (context) {
         // get parent absolute x
         var parentX = layer.parentGroup().absoluteRect().x();
 
-        // align layer with parent
-        if (left != parentX) {
-            layer.absoluteRect().setX(parentX);
+        // set the scope to the layer group that the currently selected layer is in
+        var scope = layer.parentGroup().layers();
+        // set up the predicate and receive an array of matched layers
+        var predicate = NSPredicate.predicateWithFormat("absoluteRect.x+absoluteRect.width < %@", left);
+        var queryResult = scope.filteredArrayUsingPredicate(predicate);
+
+        // find rightmost layer (queryResult seems not to be sortable)
+        var loop = queryResult.objectEnumerator();
+        var item, rightmost = -Number.MAX_VALUE;
+        while (item = loop.nextObject()) {
+          var right = item.absoluteRect().x() + item.absoluteRect().width()
+          if (right > rightmost) {rightmost = right}
+        }
+        // move layer
+        if (rightmost != -Number.MAX_VALUE) {
+          layer.absoluteRect().setX(rightmost);
+        } else if (left > parentX) {
+          layer.absoluteRect().setX(parentX);
         } else {
-            com.getflourish.utils.sendAlignLeft();
+          com.getflourish.utils.sendAlignLeft();
         }
 
-        // display relative position info
         com.getflourish.common.showMarginsOf(layer);
     } else {
         com.getflourish.utils.sendAlignLeft();
