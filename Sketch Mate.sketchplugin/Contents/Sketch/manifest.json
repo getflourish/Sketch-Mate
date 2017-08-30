@@ -101,7 +101,7 @@
     {
       "name": "Select Below",
       "identifier": "com.getflourish.mate.select.below",
-      "shortcut": "shift cmd b",
+      "shortcut": "control cmd b",
       "script": "Select/Select Below.js"
     },
     {

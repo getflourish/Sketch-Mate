@@ -19,11 +19,11 @@ var onRun = function(context) {
   // code below contains code from Ashung Hung, Ashung.hung@gmail.com
 
   // Deselect all layers
-  if (page.deselectAllLayers) {
-      page.deselectAllLayers();
-  } else {
-      page.changeSelectionBySelectingLayers(nil);
-  }
+  // if (page.deselectAllLayers) {
+  //     page.deselectAllLayers();
+  // } else {
+  //     page.changeSelectionBySelectingLayers(nil);
+  // }
 
   var loop = queryResult.objectEnumerator();
   var layer;
